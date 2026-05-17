@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sticker Bundle | Rose Vale Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+    <head>
+  <title>Rose Vale Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<header>
+  <h1>Sticker Pack Bundle</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown(event)">Projects</button>
+
+      <div class="dropdown-content">
+        <a href="rose-vale-world.html">Rose Vale World</a>
+        <a href="character-designs.html">Character Designs</a>
+        <a href="future-game.html">Future Game</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h2>Complete Sticker Collection</h2>
+    <p>Get both digital and physical versions together.</p>
+  </section>
+
+  <section>
+    <h2>What’s Included</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Digital Pack</h3>
+        <p>PNG stickers for edits, devices, and online creative use.</p>
+      </div>
+
+      <div class="card">
+        <h3>Physical Pack</h3>
+        <p>Printed sticker collection for real-world use and display.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Bundle Details</h2>
+
+    <ul>
+      <li>Matching sticker designs</li>
+      <li>Digital instant download included</li>
+      <li>Physical printed sticker set included</li>
+      <li>Designed for collectors and creators</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Status</h2>
+    <p>Coming soon</p>
+  </section>
+
+</main>
+
+<script>
+function toggleDropdown(event) {
+  event.target.closest(".dropdown")
+    .querySelector(".dropdown-content")
+    .classList.toggle("show");
+}
+</script>
+
+<footer>
+  <p>© Rose Vale Studio</p>
+</footer>
+
+</body>
+
+</html>

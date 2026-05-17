@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shop | Rose Vale Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+   <head>
+  <title>Rose Vale Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<header>
+  <h1>Rose Vale Studio Store</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown(event)">Projects</button>
+
+      <div class="dropdown-content">
+        <a href="rose-vale-world.html">Rose Vale World</a>
+        <a href="character-designs.html">Character Designs</a>
+        <a href="future-game.html">Future Game</a>
+      </div>
+    </div>
+  </nav>
+
+  <p class="tagline">
+    <em>Digital stories, art, books, merch, and game concepts.</em>
+  </p>
+</header>
+
+<main>
+
+  <!-- FEATURED -->
+  <section class="hero">
+    <h2>Featured Drops</h2>
+    <p>Major releases from Rose Vale Studio.</p>
+  </section>
+
+  <section class="grid">
+
+    <a class="card featured" href="product-lorebook.html">
+      <div class="img-placeholder"></div>
+      <h3>Rose Vale Lore Book</h3>
+      <p>Worldbuilding, hidden lore, and character history.</p>
+      <div class="price">$8.99</div>
+      <span class="tag">Featured</span>
+    </a>
+
+    <a class="card featured" href="product-future-game.html">
+      <div class="img-placeholder"></div>
+      <h3>Future Game Concept</h3>
+      <p>Story-driven indie game in early development.</p>
+      <div class="price">Free</div>
+      <span class="tag">In Dev</span>
+    </a>
+
+  </section>
+
+  <!-- MERCH -->
+  <section>
+    <h2>Digital & Physical Merch</h2>
+
+    <div class="grid">
+
+      <a class="card" href="product-stickers-digital.html">
+        <div class="img-placeholder"></div>
+        <h3>Sticker Pack (Digital)</h3>
+        <p>PNG files for edits, socials, and creative use.</p>
+        <div class="price">$3.99</div>
+        <span class="tag">Digital</span>
+      </a>
+
+      <a class="card" href="product-stickers-physical.html">
+        <div class="img-placeholder"></div>
+        <h3>Sticker Pack (Physical)</h3>
+        <p>Printed stickers for real-world use.</p>
+        <div class="price">$7.99</div>
+        <span class="tag">Physical</span>
+      </a>
+
+      <a class="card featured" href="product-stickers-bundle.html">
+        <div class="img-placeholder"></div>
+        <h3>Sticker Bundle</h3>
+        <p>Digital + physical combined pack.</p>
+        <div class="price">$10.99</div>
+        <span class="tag">Bundle</span>
+      </a>
+
+      <a class="card" href="product-print.html">
+        <div class="img-placeholder"></div>
+        <h3>Art Prints</h3>
+        <p>High-resolution character illustrations.</p>
+        <div class="price">$5.99</div>
+        <span class="tag">Art</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section>
+    <h2>Books & Lore</h2>
+
+    <div class="grid">
+
+      <a class="card" href="product-storybook.html">
+        <div class="img-placeholder"></div>
+        <h3>Story Book</h3>
+        <p>Main narrative and character arcs.</p>
+        <div class="price">$6.99</div>
+        <span class="tag">Book</span>
+      </a>
+
+      <a class="card" href="product-lorebook.html">
+        <div class="img-placeholder"></div>
+        <h3>Lore Expansion Book</h3>
+        <p>Extended world details and hidden lore.</p>
+        <div class="price">$8.99</div>
+        <span class="tag">Lore</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section>
+    <h2>Games</h2>
+
+    <div class="grid">
+
+      <a class="card" href="product-future-game.html">
+        <div class="img-placeholder"></div>
+        <h3>Future Game</h3>
+        <p>Exploration-based indie game concept.</p>
+        <div class="price">Free / Coming Soon</div>
+        <span class="tag">Game</span>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© Rose Vale Studio</p>
+</footer>
+
+<script>
+function toggleDropdown(event) {
+  event.target.closest(".dropdown")
+    .querySelector(".dropdown-content")
+    .classList.toggle("show");
+}
+</script>
+
+</body>
+
+</html>
