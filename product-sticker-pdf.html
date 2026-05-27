@@ -41,75 +41,75 @@
 
 </header>
 
-<main class="product-grid">
+<main class="grid">
 
   <!-- FOX PACK -->
+  <div class="card">
 
-  <div class="product-card">
+    <div class="img-placeholder"></div>
 
-    <img src="images/fox-pack.png" alt="Fox Sticker Pack">
-
-    <h2>Fox Sticker Pack</h2>
+    <h3>Fox Sticker Pack</h3>
 
     <p>
       Fantasy fox-themed stickers for journals,
       planners, laptops, and digital notebooks.
     </p>
 
-    <div class="product-price">
-      Digital: $3.99 • Physical: $7.99
+    <div class="price">$3.99 / $7.99</div>
+
+    <div>
+      <a class="buy-btn" href="#">Buy Digital PDF</a>
     </div>
 
-    <div class="buttons">
-      <a class="buy-btn" href="#">Buy Digital PDF</a>
+    <div>
       <a class="buy-btn" href="#">Buy Physical Sheet</a>
     </div>
 
   </div>
 
   <!-- SPACE PACK -->
+  <div class="card">
 
-  <div class="product-card">
+    <div class="img-placeholder"></div>
 
-    <img src="images/space-pack.png" alt="Space Sticker Pack">
-
-    <h2>Space Sticker Pack</h2>
+    <h3>Space Sticker Pack</h3>
 
     <p>
       Cosmic galaxy-themed stickers with stars,
       planets, and futuristic aesthetics.
     </p>
 
-    <div class="product-price">
-      Digital: $3.99 • Physical: $7.99
+    <div class="price">$3.99 / $7.99</div>
+
+    <div>
+      <a class="buy-btn" href="#">Buy Digital PDF</a>
     </div>
 
-    <div class="buttons">
-      <a class="buy-btn" href="#">Buy Digital PDF</a>
+    <div>
       <a class="buy-btn" href="#">Buy Physical Sheet</a>
     </div>
 
   </div>
 
   <!-- CHARACTER PACK -->
+  <div class="card">
 
-  <div class="product-card">
+    <div class="img-placeholder"></div>
 
-    <img src="images/character-pack.png" alt="Character Sticker Pack">
-
-    <h2>Character Sticker Pack</h2>
+    <h3>Character Sticker Pack</h3>
 
     <p>
       Stylized character stickers inspired by
       fantasy worlds and magical academies.
     </p>
 
-    <div class="product-price">
-      Digital: $4.99 • Physical: $8.99
+    <div class="price">$4.99 / $8.99</div>
+
+    <div>
+      <a class="buy-btn" href="#">Buy Digital PDF</a>
     </div>
 
-    <div class="buttons">
-      <a class="buy-btn" href="#">Buy Digital PDF</a>
+    <div>
       <a class="buy-btn" href="#">Buy Physical Sheet</a>
     </div>
 
@@ -139,9 +139,7 @@ window.addEventListener("click", function(e) {
   if (!e.target.matches(".dropbtn")) {
 
     document.querySelectorAll(".dropdown-content")
-      .forEach(menu => {
-        menu.classList.remove("show");
-      });
+      .forEach(menu => menu.classList.remove("show"));
 
   }
 
