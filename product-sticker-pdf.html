@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticker Sheet PDF</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+  <h1>Sticker Sheet PDF</h1>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+    <a href="devlog.html">Dev Log</a>
+
+    <div class="dropdown">
+
+      <button class="dropbtn" onclick="toggleDropdown(event)">
+        Projects
+      </button>
+
+      <div class="dropdown-content">
+
+        <a href="rose-vale-world.html">Rose Vale World</a>
+        <a href="character-designs.html">Character Designs</a>
+        <a href="future-game.html">Future Game</a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<main class="product-page">
+
+  <div class="product-hero">
+
+    <div class="product-image">
+      <img src="images/sticker-sheet-preview.png" alt="Sticker Sheet PDF Preview">
+    </div>
+
+    <div class="product-info">
+
+      <h2>Sticker Sheet PDF</h2>
+
+      <p>
+        Printable fantasy sticker pack filled with magical symbols,
+        aesthetic icons, and decorative designs for journals,
+        planners, and digital notebooks.
+      </p>
+
+      <div class="product-price">$3.99</div>
+
+      <a class="buy-btn" href="shop.html">
+        Back to Shop
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>© Rose Vale Studio</p>
+</footer>
+
+<script>
+
+function toggleDropdown(event) {
+
+  event.preventDefault();
+
+  const dropdown = event.currentTarget
+    .closest(".dropdown")
+    .querySelector(".dropdown-content");
+
+  dropdown.classList.toggle("show");
+}
+
+window.addEventListener("click", function(e) {
+
+  if (!e.target.matches(".dropbtn")) {
+
+    document.querySelectorAll(".dropdown-content")
+      .forEach(menu => {
+        menu.classList.remove("show");
+      });
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
