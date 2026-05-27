@@ -77,13 +77,13 @@
       <h3>Website Foundation Complete</h3>
 
       <p>
-        The core Rose Vale Studio website structure is now operational,
-        including the storefront, product system, multi-page layout,
-        GitHub Pages hosting, navigation system, and reusable design framework.
+        The core Rose Vale Studio website is now operational,
+        including storefront collection pages, product card system,
+        navigation structure, and reusable layout framework.
       </p>
 
       <div class="price">
-        Phase 1 Complete
+        Store System: Collection-Based (Digital + Physical)
       </div>
 
     </div>
@@ -102,11 +102,12 @@
 
         <div class="img-placeholder"></div>
 
-        <h3>Storefront System</h3>
+        <h3>Sticker Collection System</h3>
 
         <p>
-          Built a scrollable indie-style storefront with product cards,
-          hover animations, categories, and pricing layouts.
+          Built a unified sticker shop structure where each pack
+          supports both digital PDF and physical sticker sheet formats
+          with clear pricing separation.
         </p>
 
         <span class="tag">Shop</span>
@@ -135,8 +136,8 @@
         <h3>Product Page System</h3>
 
         <p>
-          Created reusable product page templates for books,
-          lore content, wallpapers, cards, and digital collectibles.
+          Standardized product layout system for all assets including
+          sticker packs, lore books, wallpapers, and digital bundles.
         </p>
 
         <span class="tag">Products</span>
@@ -165,8 +166,8 @@
         <h3>Chronobell Card System</h3>
 
         <p>
-          Planned the foundation for the Chronobell fantasy card game,
-          including starter decks and expansion concepts.
+          Planned foundation for a fantasy card system with starter decks,
+          rarity tiers, and expansion mechanics.
         </p>
 
         <span class="tag">Cards</span>
@@ -180,8 +181,8 @@
         <h3>Studio Branding</h3>
 
         <p>
-          Developed the visual direction, aesthetic identity,
-          and overall presentation style of Rose Vale Studio.
+          Developed consistent visual identity across all pages,
+          including typography, colors, and layout structure.
         </p>
 
         <span class="tag">Branding</span>
@@ -218,8 +219,8 @@
         <h3>Game Development</h3>
 
         <p>
-          Expand future indie game concepts
-          into documented systems and prototypes.
+          Expand indie game concepts into structured systems
+          and playable prototypes.
         </p>
 
         <span class="tag">Game Dev</span>
@@ -231,8 +232,8 @@
         <h3>Community Systems</h3>
 
         <p>
-          Build Discord integration, supporter systems,
-          and audience-focused updates.
+          Build audience systems including updates, feedback loops,
+          and future Discord integration.
         </p>
 
         <span class="tag">Community</span>
@@ -255,12 +256,26 @@
 
 function toggleDropdown(event) {
 
-  event.target
+  event.preventDefault();
+
+  const dropdown = event.currentTarget
     .closest(".dropdown")
-    .querySelector(".dropdown-content")
-    .classList.toggle("show");
+    .querySelector(".dropdown-content");
+
+  dropdown.classList.toggle("show");
 
 }
+
+window.addEventListener("click", function(e) {
+
+  if (!e.target.matches(".dropbtn")) {
+
+    document.querySelectorAll(".dropdown-content")
+      .forEach(menu => menu.classList.remove("show"));
+
+  }
+
+});
 
 </script>
 
