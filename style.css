@@ -150,10 +150,7 @@ section {
   overflow: hidden;
   color: inherit;
   text-decoration: none;
-
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .card:hover {
@@ -162,25 +159,16 @@ section {
   text-decoration: none;
 }
 
-/* FEATURED */
 .featured {
   border: 2px solid rgba(122,62,72,0.22);
 }
 
-/* IMAGE PLACEHOLDER */
 .img-placeholder {
   width: 100%;
   height: 180px;
   border-radius: 14px;
   margin-bottom: 14px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(122,62,72,0.25),
-      rgba(244,233,230,0.95)
-    );
-
+  background: linear-gradient(135deg, rgba(122,62,72,0.25), rgba(244,233,230,0.95));
   transition: transform 0.2s ease;
 }
 
@@ -188,7 +176,6 @@ section {
   transform: scale(1.03);
 }
 
-/* CARD CONTENT */
 .card h3 {
   margin-top: 5px;
   margin-bottom: 8px;
@@ -215,10 +202,8 @@ section {
   margin-top: 12px;
   padding: 5px 12px;
   border-radius: 30px;
-
   background: rgba(122,62,72,0.15);
   color: #7a3e48;
-
   font-size: 12px;
   font-family: Arial, sans-serif;
 }
@@ -251,14 +236,7 @@ a:hover {
   width: 100%;
   height: 360px;
   border-radius: 20px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(122,62,72,0.25),
-      rgba(244,233,230,0.95)
-    );
-
+  background: linear-gradient(135deg, rgba(122,62,72,0.25), rgba(244,233,230,0.95));
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
@@ -280,18 +258,12 @@ a:hover {
   display: inline-block;
   margin-top: 20px;
   padding: 14px 24px;
-
   border-radius: 12px;
-
   background-color: #7a3e48;
   color: white;
-
   font-family: Arial, sans-serif;
   font-weight: bold;
-
-  transition:
-    opacity 0.15s ease,
-    transform 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .buy-btn:hover {
@@ -311,6 +283,157 @@ a:hover {
   padding-left: 20px;
 }
 
+/* SHOP MAP */
+.shop-map {
+  position: relative;
+  max-width: 1050px;
+  height: 720px;
+  margin: 70px auto;
+}
+
+.map-center {
+  position: absolute;
+  left: 15px;
+  top: 220px;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: rgba(247, 227, 227, 0.92);
+  border: 20px solid rgba(242, 221, 221, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2f2f2f;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.map-center h2 {
+  margin: 0;
+  font-size: 42px;
+}
+
+.map-center p {
+  margin: 5px 0 0;
+  opacity: 0.8;
+}
+
+.map-node {
+  position: absolute;
+  width: 510px;
+  height: 98px;
+  border-radius: 80px;
+  background: rgba(245, 226, 226, 0.96);
+  color: #2f2f2f;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-left: 25px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-node:hover {
+  transform: translateX(8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  text-decoration: none;
+}
+
+.map-node span {
+  width: 86px;
+  height: 86px;
+  min-width: 86px;
+  border-radius: 50%;
+  background: #fffafa;
+  border: 5px solid #2f2f2f;
+  box-shadow: inset 0 0 0 13px rgba(245, 226, 226, 0.9);
+}
+
+.map-node h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.map-node p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* black connector lines */
+.map-node::before {
+  content: "";
+  position: absolute;
+  left: -155px;
+  top: 47px;
+  width: 160px;
+  height: 5px;
+  background: #2f2f2f;
+  transform-origin: right center;
+}
+
+/* pink connection dots */
+.map-node::after {
+  content: "";
+  position: absolute;
+  left: -165px;
+  top: 37px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ead0d0;
+  z-index: 2;
+}
+
+/* branch positions */
+.node-1 {
+  left: 350px;
+  top: 15px;
+}
+
+.node-2 {
+  left: 435px;
+  top: 155px;
+}
+
+.node-3 {
+  left: 470px;
+  top: 305px;
+}
+
+.node-4 {
+  left: 435px;
+  top: 455px;
+}
+
+.node-5 {
+  left: 350px;
+  top: 595px;
+}
+
+/* branch angles */
+.node-1::before {
+  transform: rotate(38deg);
+}
+
+.node-2::before {
+  transform: rotate(20deg);
+}
+
+.node-3::before {
+  transform: rotate(0deg);
+}
+
+.node-4::before {
+  transform: rotate(-20deg);
+}
+
+.node-5::before {
+  transform: rotate(-38deg);
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -321,8 +444,7 @@ footer {
 }
 
 /* MOBILE */
-@media (max-width: 700px) {
-
+@media (max-width: 850px) {
   header {
     padding: 40px 15px;
   }
@@ -343,4 +465,30 @@ footer {
     height: 260px;
   }
 
+  .shop-map {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .map-center,
+  .map-node {
+    position: static;
+  }
+
+  .map-center {
+    width: 240px;
+    height: 240px;
+  }
+
+  .map-node {
+    width: 95%;
+  }
+
+  .map-node::before,
+  .map-node::after {
+    display: none;
+  }
 }
