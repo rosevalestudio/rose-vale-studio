@@ -362,7 +362,6 @@ a:hover {
   opacity: 0.8;
 }
 
-/* soft pink dots only */
 .map-node::before {
   content: "";
   position: absolute;
@@ -374,7 +373,7 @@ a:hover {
   background: #ead0d0;
 }
 
-/* shop positions */
+/* SHOP POSITIONS */
 .node-1 {
   left: 340px;
   top: 15px;
@@ -473,7 +472,6 @@ a:hover {
   opacity: 0.8;
 }
 
-/* soft pink dots only */
 .sticker-node::before {
   content: "";
   position: absolute;
@@ -485,7 +483,7 @@ a:hover {
   background: #ead0d0;
 }
 
-/* sticker positions */
+/* STICKER POSITIONS */
 .sticker-1 {
   left: 340px;
   top: 35px;
@@ -501,72 +499,7 @@ a:hover {
   top: 385px;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 12px;
-  font-family: Arial, sans-serif;
-  opacity: 0.7;
-}
-
-/* MOBILE */
-@media (max-width: 850px) {
-  header {
-    padding: 40px 15px;
-  }
-
-  .hero h2 {
-    font-size: 30px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-hero {
-    grid-template-columns: 1fr;
-  }
-
-  .product-image {
-    height: 260px;
-  }
-
-  .shop-map,
-  .sticker-map {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-  }
-
-  .map-center,
-  .map-node,
-  .sticker-center,
-  .sticker-node {
-    position: static;
-  }
-
-  .map-center,
-  .sticker-center {
-    width: 220px;
-    height: 220px;
-  }
-
-  .map-node,
-  .sticker-node {
-    width: 95%;
-  }
-
-  .map-node::before,
-  .sticker-node::before {
-    display: none;
-  }
-}
-
 /* STICKER ARCHIVE */
-
 .sticker-archive {
   max-width: 850px;
   margin: 50px auto;
@@ -618,7 +551,6 @@ footer {
 }
 
 /* STICKER POPUP */
-
 .sticker-popup {
   display: none;
   position: fixed;
@@ -686,7 +618,69 @@ footer {
   color: #2f2f2f;
 }
 
-@media (max-width: 750px) {
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  opacity: 0.7;
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+  header {
+    padding: 40px 15px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 260px;
+  }
+
+  .shop-map,
+  .sticker-map {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .map-center,
+  .map-node,
+  .sticker-center,
+  .sticker-node {
+    position: static;
+  }
+
+  .map-center,
+  .sticker-center {
+    width: 220px;
+    height: 220px;
+  }
+
+  .map-node,
+  .sticker-node {
+    width: 95%;
+  }
+
+  .map-node::before,
+  .sticker-node::before {
+    display: none;
+  }
+
   .sticker-preview {
     grid-template-columns: 1fr;
   }
