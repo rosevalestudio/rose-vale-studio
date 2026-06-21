@@ -1,97 +1,196 @@
-/* SHOP MAP */
-.shop-map {
+/* STICKER MAP */
+
+.sticker-map {
   position: relative;
-  max-width: 1050px;
-  height: 720px;
-  margin: 70px auto;
+  max-width: 950px;
+  height: 600px;
+  margin: 60px auto;
 }
 
-.map-center {
+.sticker-center {
   position: absolute;
-  left: 15px;
-  top: 220px;
-  width: 290px;
-  height: 290px;
+  left: 40px;
+  top: 170px;
+
+  width: 260px;
+  height: 260px;
+
   border-radius: 50%;
-  background: rgba(247, 227, 227, 0.92);
-  border: 20px solid rgba(242, 221, 221, 0.85);
+
+  background: #f7e3e3;
+  border: 18px solid #f2dddd;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #2f2f2f;
+
   text-align: center;
+  color: #2f2f2f;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.map-node {
+.sticker-center h2 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.sticker-center p {
+  margin: 5px 0 0;
+  opacity: 0.8;
+}
+
+.sticker-node {
   position: absolute;
-  width: 510px;
+
+  width: 500px;
   height: 98px;
+
   border-radius: 80px;
-  background: rgba(245, 226, 226, 0.96);
+
+  background: #ead0d0;
+
   color: #2f2f2f;
   text-decoration: none;
+
   display: flex;
   align-items: center;
   gap: 22px;
+
   padding-left: 25px;
+
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.map-node span {
+.sticker-node:hover {
+  transform: translateX(8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  text-decoration: none;
+}
+
+.sticker-node span {
   width: 86px;
   height: 86px;
+
   min-width: 86px;
+
   border-radius: 50%;
+
   background: #fffafa;
+
   border: 5px solid #2f2f2f;
-  box-shadow: inset 0 0 0 13px rgba(245, 226, 226, 0.9);
+
+  box-shadow: inset 0 0 0 13px #f5e2e2;
 }
 
-/* straight clean lines */
-.map-node::before {
+.sticker-node h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.sticker-node p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* connector lines */
+.sticker-node::before {
   content: "";
+
   position: absolute;
-  left: -115px;
+
+  left: -170px;
   top: 47px;
-  width: 115px;
-  height: 4px;
+
+  width: 170px;
+  height: 5px;
+
   background: #2f2f2f;
+
+  transform-origin: right center;
 }
 
-/* dots */
-.map-node::after {
+/* connection dots */
+.sticker-node::after {
   content: "";
+
   position: absolute;
-  left: -125px;
+
+  left: -180px;
   top: 37px;
+
   width: 22px;
   height: 22px;
+
   border-radius: 50%;
+
   background: #ead0d0;
+
+  z-index: 2;
 }
 
-/* positions */
-.node-1 {
+/* sticker branch positions */
+.sticker-1 {
   left: 360px;
-  top: 40px;
+  top: 80px;
 }
 
-.node-2 {
-  left: 360px;
-  top: 170px;
+.sticker-2 {
+  left: 420px;
+  top: 250px;
 }
 
-.node-3 {
+.sticker-3 {
   left: 360px;
-  top: 300px;
+  top: 420px;
 }
 
-.node-4 {
-  left: 360px;
-  top: 430px;
+/* sticker branch angles */
+.sticker-1::before {
+  transform: rotate(28deg);
 }
 
-.node-5 {
-  left: 360px;
-  top: 560px;
+.sticker-2::before {
+  transform: rotate(0deg);
+}
+
+.sticker-3::before {
+  transform: rotate(-28deg);
+}
+
+/* sticker mobile */
+@media (max-width: 850px) {
+
+  .sticker-map {
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+  }
+
+  .sticker-center,
+  .sticker-node {
+    position: static;
+  }
+
+  .sticker-center {
+    width: 230px;
+    height: 230px;
+  }
+
+  .sticker-node {
+    width: 95%;
+  }
+
+  .sticker-node::before,
+  .sticker-node::after {
+    display: none;
+  }
 }
