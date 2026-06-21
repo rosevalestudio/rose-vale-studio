@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sticker Sheet Collection | Rose Vale Studio</title>
+  <title>Sticker Sheet Collection</title>
 
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
@@ -40,54 +39,90 @@
 
   </nav>
 
-  <p class="tagline">
-    <em>Printable fantasy sticker collections from Rose Vale Studio.</em>
-  </p>
-
 </header>
 
-<main>
+<main class="grid">
 
-  <section class="hero">
-    <h2>Sticker Archive</h2>
-    <p>Choose a sticker collection to open its full page.</p>
-  </section>
+  <!-- FOX PACK -->
+  <div class="card">
 
-  <section class="sticker-map">
+    <div class="img-placeholder"></div>
 
-    <div class="sticker-center">
-      <h2>Stickers</h2>
-      <p>Collections</p>
+    <h3>Fox Sticker Pack</h3>
+
+    <p>
+      Fantasy fox-themed stickers for journals,
+      planners, laptops, and digital notebooks.
+    </p>
+
+    <div class="price">
+      Digital PDF: $3.99<br>
+      Physical Sticker Sheet: $7.99
     </div>
 
-    <a class="sticker-node sticker-1" href="chronobell-stickers.html">
-      <span></span>
+    <div>
+      <a class="buy-btn" href="#">Buy Digital PDF - $3.99</a>
+    </div>
 
-      <div>
-        <h3>Chronobell Stickers</h3>
-        <p>Characters, keys, records, and lore.</p>
-      </div>
-    </a>
+    <div>
+      <a class="buy-btn" href="#">Buy Physical Sheet - $7.99</a>
+    </div>
 
-    <a class="sticker-node sticker-2" href="space-stickers.html">
-      <span></span>
+  </div>
 
-      <div>
-        <h3>Space Stickers</h3>
-        <p>Stars, galaxies, planets, and cosmic designs.</p>
-      </div>
-    </a>
+  <!-- SPACE PACK -->
+  <div class="card">
 
-    <a class="sticker-node sticker-3" href="fox-stickers.html">
-      <span></span>
+    <div class="img-placeholder"></div>
 
-      <div>
-        <h3>Fox Stickers</h3>
-        <p>Fantasy fox designs for journals and planners.</p>
-      </div>
-    </a>
+    <h3>Space Sticker Pack</h3>
 
-  </section>
+    <p>
+      Cosmic galaxy-themed stickers with stars,
+      planets, and futuristic aesthetics.
+    </p>
+
+    <div class="price">
+      Digital PDF: $3.99<br>
+      Physical Sticker Sheet: $7.99
+    </div>
+
+    <div>
+      <a class="buy-btn" href="#">Buy Digital PDF - $3.99</a>
+    </div>
+
+    <div>
+      <a class="buy-btn" href="#">Buy Physical Sheet - $7.99</a>
+    </div>
+
+  </div>
+
+  <!-- CHARACTER PACK -->
+  <div class="card">
+
+    <div class="img-placeholder"></div>
+
+    <h3>Character Sticker Pack</h3>
+
+    <p>
+      Stylized character stickers inspired by
+      fantasy worlds and magical academies.
+    </p>
+
+    <div class="price">
+      Digital PDF: $4.99<br>
+      Physical Sticker Sheet: $8.99
+    </div>
+
+    <div>
+      <a class="buy-btn" href="#">Buy Digital PDF - $4.99</a>
+    </div>
+
+    <div>
+      <a class="buy-btn" href="#">Buy Physical Sheet - $8.99</a>
+    </div>
+
+  </div>
 
 </main>
 
@@ -106,7 +141,6 @@ function toggleDropdown(event) {
     .querySelector(".dropdown-content");
 
   dropdown.classList.toggle("show");
-
 }
 
 window.addEventListener("click", function(e) {
