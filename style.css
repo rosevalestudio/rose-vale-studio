@@ -491,4 +491,58 @@ footer {
   .map-node::after {
     display: none;
   }
+/* STICKER HUB FOLDERS */
+
+.sticker-hub {
+  max-width: 900px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.sticker-folder {
+  position: relative;
+  display: block;
+  color: #2f2f2f;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.sticker-folder:hover {
+  transform: translateX(10px);
+  text-decoration: none;
+}
+
+.folder-tab {
+  width: 180px;
+  height: 38px;
+  background: #e8c9c9;
+  border-radius: 18px 18px 0 0;
+  margin-left: 28px;
+}
+
+.folder-body {
+  background: #f5e2e2;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border: 2px solid rgba(122,62,72,0.15);
+}
+
+.folder-body h3 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.folder-body p {
+  margin-bottom: 14px;
+}
+
+.folder-price {
+  display: inline-block;
+  color: #7a3e48;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
 }
