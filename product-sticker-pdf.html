@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sticker Sheet Collection</title>
+  <title>Sticker Sheet Collection | Rose Vale Studio</title>
 
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
@@ -17,14 +19,12 @@
   <h1>Sticker Sheet Collection</h1>
 
   <nav>
-
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="shop.html">Shop</a>
     <a href="devlog.html">Dev Log</a>
 
     <div class="dropdown">
-
       <button class="dropbtn" onclick="toggleDropdown(event)">
         Projects
       </button>
@@ -34,97 +34,94 @@
         <a href="character-designs.html">Character Designs</a>
         <a href="future-game.html">Future Game</a>
       </div>
-
     </div>
-
   </nav>
+
+  <p class="tagline">
+    <em>Open a sticker file to preview what you are buying.</em>
+  </p>
 
 </header>
 
-<main class="grid">
+<main>
 
-  <!-- FOX PACK -->
-  <div class="card">
+  <section class="hero">
+    <h2>Sticker Archive</h2>
+    <p>Click a sticker file to preview the pack, price, and buying options.</p>
+  </section>
 
-    <div class="img-placeholder"></div>
+  <section class="sticker-archive">
 
-    <h3>Fox Sticker Pack</h3>
+    <button class="sticker-file" onclick="openSticker(
+      'Fox Sticker Pack',
+      'Fantasy fox-themed stickers for journals, planners, laptops, and digital notebooks.',
+      'Digital PDF: $3.99',
+      'Physical Sticker Sheet: $7.99',
+      'images/fox-stickers.png'
+    )">
+      <span class="file-circle"></span>
+      <div>
+        <h3>Fox Sticker Pack</h3>
+        <p>Fantasy fox designs</p>
+      </div>
+    </button>
 
-    <p>
-      Fantasy fox-themed stickers for journals,
-      planners, laptops, and digital notebooks.
-    </p>
+    <button class="sticker-file" onclick="openSticker(
+      'Space Sticker Pack',
+      'Cosmic galaxy-themed stickers with stars, planets, moons, and futuristic aesthetics.',
+      'Digital PDF: $3.99',
+      'Physical Sticker Sheet: $7.99',
+      'images/space-stickers.png'
+    )">
+      <span class="file-circle"></span>
+      <div>
+        <h3>Space Sticker Pack</h3>
+        <p>Stars, planets, and galaxies</p>
+      </div>
+    </button>
 
-    <div class="price">
-      Digital PDF: $3.99<br>
-      Physical Sticker Sheet: $7.99
-    </div>
+    <button class="sticker-file" onclick="openSticker(
+      'Chronobell Sticker Pack',
+      'Stylized character stickers inspired by Chronobell, magical academies, keys, records, and lore.',
+      'Digital PDF: $4.99',
+      'Physical Sticker Sheet: $8.99',
+      'images/chronobell-stickers.png'
+    )">
+      <span class="file-circle"></span>
+      <div>
+        <h3>Chronobell Sticker Pack</h3>
+        <p>Characters, keys, and lore</p>
+      </div>
+    </button>
 
-    <div>
-      <a class="buy-btn" href="#">Buy Digital PDF - $3.99</a>
-    </div>
-
-    <div>
-      <a class="buy-btn" href="#">Buy Physical Sheet - $7.99</a>
-    </div>
-
-  </div>
-
-  <!-- SPACE PACK -->
-  <div class="card">
-
-    <div class="img-placeholder"></div>
-
-    <h3>Space Sticker Pack</h3>
-
-    <p>
-      Cosmic galaxy-themed stickers with stars,
-      planets, and futuristic aesthetics.
-    </p>
-
-    <div class="price">
-      Digital PDF: $3.99<br>
-      Physical Sticker Sheet: $7.99
-    </div>
-
-    <div>
-      <a class="buy-btn" href="#">Buy Digital PDF - $3.99</a>
-    </div>
-
-    <div>
-      <a class="buy-btn" href="#">Buy Physical Sheet - $7.99</a>
-    </div>
-
-  </div>
-
-  <!-- CHARACTER PACK -->
-  <div class="card">
-
-    <div class="img-placeholder"></div>
-
-    <h3>Character Sticker Pack</h3>
-
-    <p>
-      Stylized character stickers inspired by
-      fantasy worlds and magical academies.
-    </p>
-
-    <div class="price">
-      Digital PDF: $4.99<br>
-      Physical Sticker Sheet: $8.99
-    </div>
-
-    <div>
-      <a class="buy-btn" href="#">Buy Digital PDF - $4.99</a>
-    </div>
-
-    <div>
-      <a class="buy-btn" href="#">Buy Physical Sheet - $8.99</a>
-    </div>
-
-  </div>
+  </section>
 
 </main>
+
+<div class="sticker-popup" id="stickerPopup">
+
+  <div class="sticker-preview">
+
+    <button class="close-preview" onclick="closeSticker()">×</button>
+
+    <div class="preview-image-box">
+      <img id="previewImage" src="" alt="Sticker preview">
+    </div>
+
+    <div class="preview-info">
+      <h2 id="previewTitle">Sticker Pack</h2>
+      <p id="previewDescription"></p>
+
+      <div class="preview-price" id="previewDigital"></div>
+      <div class="preview-price" id="previewPhysical"></div>
+
+      <a class="buy-btn" href="#">Buy Digital PDF</a>
+      <a class="buy-btn" href="#">Buy Physical Sheet</a>
+    </div>
+
+  </div>
+
+</div>
 
 <footer>
   <p>© Rose Vale Studio</p>
@@ -132,8 +129,21 @@
 
 <script>
 
-function toggleDropdown(event) {
+function openSticker(title, description, digital, physical, image) {
+  document.getElementById("previewTitle").textContent = title;
+  document.getElementById("previewDescription").textContent = description;
+  document.getElementById("previewDigital").textContent = digital;
+  document.getElementById("previewPhysical").textContent = physical;
+  document.getElementById("previewImage").src = image;
 
+  document.getElementById("stickerPopup").classList.add("show");
+}
+
+function closeSticker() {
+  document.getElementById("stickerPopup").classList.remove("show");
+}
+
+function toggleDropdown(event) {
   event.preventDefault();
 
   const dropdown = event.currentTarget
@@ -144,17 +154,14 @@ function toggleDropdown(event) {
 }
 
 window.addEventListener("click", function(e) {
-
   if (!e.target.matches(".dropbtn")) {
-
     document.querySelectorAll(".dropdown-content")
       .forEach(menu => menu.classList.remove("show"));
-
   }
-
 });
 
 </script>
 
 </body>
 </html>
+```
