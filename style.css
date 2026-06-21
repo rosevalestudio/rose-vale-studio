@@ -564,3 +564,135 @@ footer {
     display: none;
   }
 }
+
+```css
+/* STICKER ARCHIVE */
+
+.sticker-archive {
+  max-width: 850px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sticker-file {
+  width: 100%;
+  border: none;
+  border-radius: 70px;
+  background: rgba(245, 226, 226, 0.96);
+  color: #2f2f2f;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 28px;
+  text-align: left;
+  cursor: pointer;
+  font-family: Garamond, serif;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sticker-file:hover {
+  transform: translateX(10px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.file-circle {
+  width: 82px;
+  height: 82px;
+  min-width: 82px;
+  border-radius: 50%;
+  background: #fffafa;
+  border: 5px solid #2f2f2f;
+  box-shadow: inset 0 0 0 12px rgba(245, 226, 226, 0.9);
+}
+
+.sticker-file h3 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.sticker-file p {
+  margin: 4px 0 0;
+  opacity: 0.8;
+}
+
+/* STICKER POPUP */
+
+.sticker-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.sticker-popup.show {
+  display: flex;
+}
+
+.sticker-preview {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  background: #f4e9e6;
+  border-radius: 28px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+}
+
+.preview-image-box {
+  min-height: 360px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(122,62,72,0.25), rgba(244,233,230,0.95));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preview-image-box img {
+  max-width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+}
+
+.preview-info h2 {
+  font-size: 34px;
+  margin-top: 0;
+}
+
+.preview-price {
+  margin-top: 12px;
+  color: #7a3e48;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.close-preview {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #2f2f2f;
+}
+
+@media (max-width: 750px) {
+  .sticker-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-image-box {
+    min-height: 260px;
+  }
+}
