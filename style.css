@@ -689,3 +689,57 @@ footer {
     min-height: 260px;
   }
 }
+
+/* STICKER PRODUCT PAGES */
+
+.sticker-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.sticker-product-card {
+  background: rgba(255,255,255,0.75);
+  border-radius: 22px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.sticker-product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #f5e2e2;
+  border-radius: 16px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.sticker-product-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.sticker-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.sticker-lightbox.show {
+  display: flex;
+}
+
+.sticker-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  background: #f4e9e6;
+  padding: 14px;
+}
