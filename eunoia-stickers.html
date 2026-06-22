@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eunoia Stickers | Rose Vale Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+<header>
+  <h1>Eunoia Sticker Sheet</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+    <a href="devlog.html">Dev Log</a>
+    <a href="chronobell-stickers.html">Back to Chronobell</a>
+  </nav>
+
+  <p class="tagline"><em>Gentle poet sticker collection.</em></p>
+</header>
+
+<main class="sticker-detail-page">
+
+  <section class="hero">
+    <h2>Eunoia Rosewood Stickers</h2>
+    <p>Preview the full sticker sheet and individual sticker designs.</p>
+  </section>
+
+  <section class="sticker-detail">
+
+    <div class="main-sticker-preview">
+      <img id="mainStickerImage" src="images/eunoia-stickers.png" alt="Eunoia sticker sheet">
+    </div>
+
+    <div class="sticker-detail-info">
+      <h2>Eunoia Rosewood</h2>
+      <p>Soft rose, tea cup, poet, and Chronobell-inspired sticker designs.</p>
+
+      <div class="product-price">Digital PDF: $4.99</div>
+      <div class="product-price">Physical Sheet: $8.99</div>
+
+      <a class="buy-btn" href="#">Digital PDF Coming Soon</a>
+      <a class="buy-btn" href="#">Physical Sheet Coming Soon</a>
+    </div>
+
+  </section>
+
+  <section class="mini-sticker-gallery">
+    <img src="images/eunoia-stickers.png" onclick="changeSticker(this.src)" alt="Eunoia full sheet">
+    <img src="images/eunoia-rose.png" onclick="changeSticker(this.src)" alt="Eunoia rose sticker">
+    <img src="images/eunoia-teacup.png" onclick="changeSticker(this.src)" alt="Eunoia teacup sticker">
+    <img src="images/eunoia-portrait.png" onclick="changeSticker(this.src)" alt="Eunoia portrait sticker">
+  </section>
+
+</main>
+
+<footer>
+  <p>© Rose Vale Studio</p>
+</footer>
+
+<script>
+function changeSticker(image) {
+  document.getElementById("mainStickerImage").src = image;
+}
+</script>
+
+</body>
+</html>
