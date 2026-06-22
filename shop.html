@@ -2,10 +2,12 @@
 <html>
 
 <head>
+
   <title>Shop | Rose Vale Studio</title>
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body>
@@ -14,7 +16,10 @@
 
   <h1>Rose Vale Studio Store</h1>
 
-  <img src="rosevale.PNG" alt="Rose Vale Studio Logo" width="150" class="logo">
+  <img src="rosevale.PNG"
+       alt="Rose Vale Studio Logo"
+       width="150"
+       class="logo">
 
   <nav>
 
@@ -25,14 +30,25 @@
 
     <div class="dropdown">
 
-      <button class="dropbtn" onclick="toggleDropdown(event)">
+      <button class="dropbtn"
+              onclick="toggleDropdown(event)">
         Projects
       </button>
 
       <div class="dropdown-content">
-        <a href="rose-vale-world.html">Rose Vale World</a>
-        <a href="character-designs.html">Character Designs</a>
-        <a href="future-game.html">Future Game</a>
+
+        <a href="rose-vale-world.html">
+          Rose Vale World
+        </a>
+
+        <a href="character-designs.html">
+          Character Designs
+        </a>
+
+        <a href="future-game.html">
+          Future Game
+        </a>
+
       </div>
 
     </div>
@@ -40,7 +56,9 @@
   </nav>
 
   <p class="tagline">
-    <em>Fantasy stories, worldbuilding, art, and digital collectibles.</em>
+    <em>
+      Fantasy stories, worldbuilding, art, and digital collectibles.
+    </em>
   </p>
 
 </header>
@@ -59,54 +77,98 @@
 
   <section class="shop-map">
 
-    <div class="map-center">
+    <a class="map-center"
+       href="shop.html">
+
       <h2>Shop</h2>
+
       <p>Rose Vale Studio</p>
-    </div>
 
-    <a class="map-node node-1" href="product-fantasy-novel.html">
+    </a>
+
+    <a class="map-node node-1"
+       href="product-fantasy-novel.html">
+
       <span></span>
 
       <div>
+
         <h3>Books</h3>
-        <p>Novel and story releases</p>
+
+        <p>
+          Novel and story releases.
+        </p>
+
       </div>
+
     </a>
 
-    <a class="map-node node-2" href="product-lorebook.html">
+    <a class="map-node node-2"
+       href="product-lorebook.html">
+
       <span></span>
 
       <div>
+
         <h3>Lore</h3>
-        <p>Archives, maps, and records</p>
+
+        <p>
+          Archives, maps, and records.
+        </p>
+
       </div>
+
     </a>
 
-    <a class="map-node node-3" href="product-chronobell-deck.html">
+    <a class="map-node node-3"
+       href="product-chronobell-deck.html">
+
       <span></span>
 
       <div>
+
         <h3>Cards</h3>
-        <p>Chronobell starter deck</p>
+
+        <p>
+          Chronobell starter deck.
+        </p>
+
       </div>
+
     </a>
 
-    <a class="map-node node-4" href="product-art-bundle.html">
+    <a class="map-node node-4"
+       href="product-art-bundle.html">
+
       <span></span>
 
       <div>
+
         <h3>Art</h3>
-        <p>Posters, symbols, and bundles</p>
+
+        <p>
+          Posters, symbols, and bundles.
+        </p>
+
       </div>
+
     </a>
 
-    <a class="map-node node-5" href="product-sticker-pdf.html">
+    <a class="map-node node-5"
+       href="product-sticker-pdf.html">
+
       <span></span>
 
       <div>
+
         <h3>Stickers</h3>
-        <p>Printable sticker collections</p>
+
+        <p>
+          Printable sticker collections.
+        </p>
+
       </div>
+
     </a>
 
   </section>
@@ -131,6 +193,17 @@ function toggleDropdown(event) {
     .classList.toggle("show");
 
 }
+
+window.addEventListener("click", function(e) {
+
+  if (!e.target.matches(".dropbtn")) {
+
+    document.querySelectorAll(".dropdown-content")
+      .forEach(menu => menu.classList.remove("show"));
+
+  }
+
+});
 
 </script>
 
