@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Shop | Rose Vale Studio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <a href="index.html" class="logo-link">
+
+    <img
+      src="rosevale.PNG"
+      alt="Rose Vale Studio Logo"
+      class="logo">
+
+  </a>
+
+  <nav class="main-nav">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html" aria-current="page">Shop</a>
+    <a href="devlog.html">Dev Log</a>
+
+    <div class="dropdown">
+
+      <button
+        class="dropbtn"
+        type="button">
+
+        Projects ▾
+
+      </button>
+
+      <div class="dropdown-content">
+
+        <a href="The Law of the Thirteenth Clock.html">
+          The Law of the Thirteenth Clock
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Future Product Catalog</h1>
+
+  <p>
+    Every product is based on original Rose Vale Studio worlds.
+    The catalog below represents the types of products planned for future release.
+  </p>
+
+</section>
+
+<section>
+
+<h2>Books</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Novels</h3>
+
+<p>
+Original stories published by Rose Vale Studio.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Collector's Edition Novels</h3>
+
+<p>
+Special editions with premium presentation.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Hardcover Lore Books</h3>
+
+<p>
+Worldbuilding, history, maps, creatures, and more.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Black Book Replica Journals</h3>
+
+<p>
+Inspired by the mysterious book from Chronobell.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Art Books</h3>
+
+<p>
+Concept art and illustrations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Stationery</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Sticker Sheets</h3>
+</div>
+
+<div class="card">
+<h3>Bookmarks</h3>
+</div>
+
+<div class="card">
+<h3>Notebooks</h3>
+</div>
+
+<div class="card">
+<h3>Character Journals</h3>
+</div>
+
+<div class="card">
+<h3>Washi Tape</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Accessories</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Acrylic Keychains</h3>
+</div>
+
+<div class="card">
+<h3>Enamel Pins</h3>
+</div>
+
+<div class="card">
+<h3>Phone Grips</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Wall & Display</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Art Prints</h3>
+</div>
+
+<div class="card">
+<h3>Posters</h3>
+</div>
+
+<div class="card">
+<h3>Character Standees</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Collectibles</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Replica Keys</h3>
+</div>
+
+<div class="card">
+<h3>Decorative Potion Bottles</h3>
+</div>
+
+<div class="card">
+<h3>Domain Coins</h3>
+</div>
+
+<div class="card">
+<h3>Creature Plushies</h3>
+</div>
+
+<div class="card">
+<h3>Figurines</h3>
+</div>
+
+<div class="card">
+<h3>Wax Seal Sets</h3>
+</div>
+
+<div class="card">
+<h3>Limited Collector Boxes</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Digital Products</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>E-books</h3>
+</div>
+
+<div class="card">
+<h3>Audiobooks</h3>
+</div>
+
+<div class="card">
+<h3>Printable Journals</h3>
+</div>
+
+<div class="card">
+<h3>Icon Packs</h3>
+</div>
+
+<div class="card">
+<h3>Brushes</h3>
+</div>
+
+<div class="card">
+<h3>Fonts</h3>
+</div>
+
+<div class="card">
+<h3>Digital Sticker Packs</h3>
+</div>
+
+</div>
+
+</section>
+
+<section class="featured">
+
+<div class="card featured">
+
+<h2>Coming Soon</h2>
+
+<p>
+
+The Rose Vale Studio store is currently in development.
+Products will become available as projects are completed.
+
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+<p>
+© <span id="current-year"></span> Rose Vale Studio.
+</p>
+
+</footer>
+
+<script>
+
+const dropdown = document.querySelector(".dropdown");
+const button = document.querySelector(".dropbtn");
+const menu = document.querySelector(".dropdown-content");
+const year = document.getElementById("current-year");
+
+year.textContent = new Date().getFullYear();
+
+button.addEventListener("click", function () {
+
+menu.classList.toggle("show");
+
+});
+
+document.addEventListener("click", function (event) {
+
+if (!dropdown.contains(event.target)) {
+
+menu.classList.remove("show");
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

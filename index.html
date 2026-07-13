@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Rose Vale Studio is an independent creative studio developing original books, artwork, and collectibles, beginning with The Law of the Thirteenth Clock."
+  >
+
+  <title>Rose Vale Studio | Home</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <a href="index.html" class="logo-link" aria-label="Rose Vale Studio home">
+      <img
+        src="rosevale.PNG"
+        alt="Rose Vale Studio logo"
+        class="logo"
+      >
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="devlog.html">Dev Log</a>
+
+      <div class="dropdown">
+
+        <button
+          class="dropbtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="projects-menu"
+        >
+          Projects
+          <span aria-hidden="true">▾</span>
+        </button>
+
+        <div
+          class="dropdown-content"
+          id="projects-menu"
+        >
+          <a href="The Law of the Thirteenth Clock.html">
+            The Law of the Thirteenth Clock
+          </a>
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="simple-hero">
+
+      <div class="simple-hero-content">
+
+        <h1>
+          The Law of the Thirteenth Clock
+        </h1>
+
+        <p class="hero-text">
+          Four lifelong friends discover a mysterious Black Book and
+          awaken a quest involving lost pages, ancient Keys, fractured
+          time, and a hidden world called Chronobell.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="button" href="The Law of the Thirteenth Clock.html">
+            Discover the Story
+          </a>
+
+          <a class="button button-secondary" href="shop.html">
+            View the Shop
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="simple-hero-image">
+
+        <div class="hero-art-placeholder">
+          <span>Book artwork coming soon</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="home-links">
+
+      <a class="home-link-card" href="about.html">
+
+        <h2>About the Studio</h2>
+
+        <p>
+          Learn about Rose Vale Studio and its creative direction.
+        </p>
+
+      </a>
+
+      <a class="home-link-card" href="The Law of the Thirteenth Clock.html">
+
+        <h2>Explore The Law of the Thirteenth Clock</h2>
+
+        <p>
+          Discover the story, characters, Black Book, and six Domains.
+        </p>
+
+      </a>
+
+      <a class="home-link-card" href="shop.html">
+
+        <h2>Future Products</h2>
+
+        <p>
+          Preview planned books, stationery, accessories, and collectibles.
+        </p>
+
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <p>
+      © <span id="current-year"></span> Rose Vale Studio.
+      All original stories, characters, artwork, and worlds are protected.
+    </p>
+
+  </footer>
+
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownButton = document.querySelector(".dropbtn");
+    const dropdownMenu = document.querySelector(".dropdown-content");
+    const currentYear = document.getElementById("current-year");
+
+    currentYear.textContent = new Date().getFullYear();
+
+    function closeDropdown() {
+      dropdownMenu.classList.remove("show");
+      dropdownButton.setAttribute("aria-expanded", "false");
+    }
+
+    dropdownButton.addEventListener("click", function () {
+      const isOpen = dropdownMenu.classList.toggle("show");
+      dropdownButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!dropdown.contains(event.target)) {
+        closeDropdown();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeDropdown();
+        dropdownButton.focus();
+      }
+    });
+  </script>
+
+</body>
+
+</html>

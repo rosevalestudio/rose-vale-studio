@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Discover The Law of the Thirteenth Clock, an original fantasy mystery novel in development by Rose Vale Studio."
+  >
+
+  <title>The Law of the Thirteenth Clock | Rose Vale Studio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <a
+      href="index.html"
+      class="logo-link"
+      aria-label="Rose Vale Studio home"
+    >
+      <img
+        src="rosevale.PNG"
+        alt="Rose Vale Studio logo"
+        class="logo"
+      >
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="devlog.html">Dev Log</a>
+
+      <div class="dropdown">
+
+        <button
+          class="dropbtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="projects-menu"
+        >
+          Projects
+          <span aria-hidden="true">▾</span>
+        </button>
+
+        <div
+          class="dropdown-content"
+          id="projects-menu"
+        >
+          <a
+            href="the-law-of-the-thirteenth-clock.html"
+            aria-current="page"
+          >
+            The Law of the Thirteenth Clock
+          </a>
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="book-hero">
+
+      <div class="book-cover-area">
+
+        <div class="book-cover-placeholder">
+          <span>Book cover coming soon</span>
+        </div>
+
+      </div>
+
+      <div class="book-hero-content">
+
+        <h1>
+          The Law of the Thirteenth Clock
+        </h1>
+
+        <p class="book-subtitle">
+          A fantasy mystery about four friends, an unfinished Black Book,
+          and a world running out of time.
+        </p>
+
+        <p>
+          When Shinichi, Eunoia, Zea, and Zelen discover a strange Black
+          Book hidden inside Rosewood Athenaeum, they make one irreversible
+          choice: they say “Begin.”
+        </p>
+
+        <p>
+          Bound to the Book by matching spider lily marks, the four must
+          recover its 288 missing pages, uncover ancient Keys, survive
+          fractured time, and learn why the hidden world of Chronobell
+          appears to recognize them.
+        </p>
+
+        <span class="status-label">
+          Novel currently in development
+        </span>
+
+      </div>
+
+    </section>
+
+    <section class="story-details">
+
+      <div class="section-heading">
+        <h2>What awaits inside the Black Book</h2>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+
+          <span class="card-label">The Quest</span>
+
+          <h3>Recover the Missing Pages</h3>
+
+          <p>
+            The Black Book contains records of Keys, creatures, potions,
+            materials, and crystals scattered across England.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <span class="card-label">The World</span>
+
+          <h3>Enter Chronobell</h3>
+
+          <p>
+            Beyond the human world lies a realm divided into six Domains:
+            Time, Memory, Growth, Emotion, Reflection, and Death.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <span class="card-label">The Cost</span>
+
+          <h3>Every Choice Has Consequences</h3>
+
+          <p>
+            The Book does not merely reveal the hidden world. It changes
+            the people responsible for restoring it.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="main-cast-section">
+
+      <div class="section-heading">
+        <h2>Four main characters. One unfinished quest.</h2>
+      </div>
+
+      <div class="character-grid">
+
+        <article class="character-card">
+          <h3>Shinichi Lucan</h3>
+          <p>
+            Quiet, strategic, observant, and fiercely protective of both
+            Eunoia and the secrets surrounding the Book.
+          </p>
+        </article>
+
+        <article class="character-card">
+          <h3>Eunoia Rosewood</h3>
+          <p>
+            Thoughtful, empathetic, and closely connected to the library
+            where the Black Book was discovered.
+          </p>
+        </article>
+
+        <article class="character-card">
+          <h3>Zea Rowan</h3>
+          <p>
+            Precise, cautious, and highly observant, with a talent for
+            detecting danger and hidden patterns.
+          </p>
+        </article>
+
+        <article class="character-card">
+          <h3>Zelen Rowan</h3>
+          <p>
+            Adaptable, expressive, and emotionally perceptive, using humor
+            to hold the group together.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="centered-action">
+
+      </div>
+
+    </section>
+
+    <section class="project-status-section">
+
+      <div class="project-status-card">
+
+        <div>
+          <h2>
+            Follow its development
+          </h2>
+
+          <p>
+            Writing updates, artwork, maps, worldbuilding, and future
+            product concepts will be documented through the Rose Vale
+            Studio development log.
+          </p>
+
+        </div>
+
+        <a class="button" href="devlog.html">
+          Open Dev Log
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <p>
+      © <span id="current-year"></span> Rose Vale Studio.
+      All original stories, characters, artwork, and worlds are protected.
+    </p>
+
+  </footer>
+
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownButton = document.querySelector(".dropbtn");
+    const dropdownMenu = document.querySelector(".dropdown-content");
+    const currentYear = document.getElementById("current-year");
+
+    currentYear.textContent = new Date().getFullYear();
+
+    function closeDropdown() {
+      dropdownMenu.classList.remove("show");
+      dropdownButton.setAttribute("aria-expanded", "false");
+    }
+
+    dropdownButton.addEventListener("click", function () {
+      const isOpen = dropdownMenu.classList.toggle("show");
+      dropdownButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!dropdown.contains(event.target)) {
+        closeDropdown();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeDropdown();
+        dropdownButton.focus();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
